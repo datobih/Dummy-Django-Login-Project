@@ -1,0 +1,37 @@
+{% extends 'my_login_app/base.html' %}
+
+
+{% block body_block %}
+
+{% if is_registered == False %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Full Name:</label>
+    <input type="text" name="full_name" value="" />
+
+
+    <br />
+    <label>Email:</label>
+    <input type="email" name="email" value="" />
+
+    <br />
+
+    <label>Password:</label>
+    <input type="password" name="password" value="" />
+
+    <br />
+
+    <input type="submit" name="" value="Register" />
+
+
+</form>
+
+{% else %}
+
+<h1>Registration Successful</h1>
+
+
+
+{% endif %}
+
+{% endblock %}

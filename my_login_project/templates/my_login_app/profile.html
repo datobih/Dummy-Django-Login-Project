@@ -1,0 +1,24 @@
+{% extends 'my_login_app/base.html' %}
+
+{% block body_block %}
+
+<form enctype="multipart/form-data" method="post">
+
+    {% csrf_token %}
+    <label>Full Name:</label>
+    <input type="text" name="name" value={{profile_name}} />
+
+    <label>Portfolio:</label>
+    <input type="url" name="portfolio" value="" />
+
+
+    <label>Profile Picture:</label>
+    <input type="file" name="profile_pic" accept="image/png, image/jpeg" value="" />
+
+
+    <input type="submit" name="vv"  value="Submit" />
+
+</form>
+
+
+{% endblock %}

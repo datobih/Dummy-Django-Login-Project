@@ -1,0 +1,27 @@
+{% extends 'my_login_app/base.html' %}
+
+
+{% block body_block %}
+
+<h1>Login</h1>
+
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <label> Email </label>
+    <input type="email" name="email" value="" />
+
+    <label> Password </label>
+    <input type="password" name="password" value="" />
+
+    <input type="submit" name="" value="Login" />
+
+
+</form>
+
+
+
+
+{% endblock %}
